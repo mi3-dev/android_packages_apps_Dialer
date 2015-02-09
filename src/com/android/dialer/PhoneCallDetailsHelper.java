@@ -174,6 +174,8 @@ public class PhoneCallDetailsHelper {
 
             if (details.numberLabel == ContactInfo.GEOCODE_AS_LABEL) {
                 numberFormattedLabel = details.geocode;
+            } else if (!TextUtils.isEmpty(details.geocode)) {
+                numberFormattedLabel = details.geocode;
             } else {
                 numberFormattedLabel = Phone.getTypeLabel(mResources, details.numberType,
                         details.numberLabel);
